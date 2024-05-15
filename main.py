@@ -18,12 +18,13 @@ def scrape_page(url):
         advisory_date = datetime.strptime(date_string, '%b %d, %Y')
         alert_code = advisory.find('div', class_='c-teaser__meta').text.strip()
         link = advisory.find('a')['href']
+        full_link = f'https://www.cisa.gov{link}'
 
         advisory_data = {
             "Title": title,
             "Advisory Date": advisory_date.strftime('%Y-%m-%d'),
             "Alert Code": alert_code,
-            "Link": link
+            "Link": full_link
         }
         data.append(advisory_data)
 
