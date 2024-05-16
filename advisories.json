@@ -1,1 +1,896 @@
-[]
+[
+    {
+        "Title": "#StopRansomware: Black Basta",
+        "Advisory Date": "2024-05-10",
+        "Alert Code": "Cybersecurity Advisory | AA24-131A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-131a"
+    },
+    {
+        "Title": "#StopRansomware: Akira Ransomware",
+        "Advisory Date": "2024-04-18",
+        "Alert Code": "Cybersecurity Advisory | AA24-109A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a"
+    },
+    {
+        "Title": "Threat Actors Exploit Multiple Vulnerabilities in Ivanti Connect Secure and Policy Secure Gateways",
+        "Advisory Date": "2024-02-29",
+        "Alert Code": "Cybersecurity Advisory | AA24-060B",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-060b"
+    },
+    {
+        "Title": "#StopRansomware: Phobos Ransomware",
+        "Advisory Date": "2024-02-29",
+        "Alert Code": "Cybersecurity Advisory | AA24-060A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-060a"
+    },
+    {
+        "Title": "SVR Cyber Actors Adapt Tactics for Initial Cloud Access",
+        "Advisory Date": "2024-02-26",
+        "Alert Code": "Cybersecurity Advisory | AA24-057A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-057a"
+    },
+    {
+        "Title": "Threat Actor Leverages Compromised Account of Former Employee to Access State Government Organization",
+        "Advisory Date": "2024-02-15",
+        "Alert Code": "Cybersecurity Advisory | AA24-046A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-046a"
+    },
+    {
+        "Title": "PRC State-Sponsored Actors Compromise and Maintain Persistent Access to U.S. Critical Infrastructure",
+        "Advisory Date": "2024-02-07",
+        "Alert Code": "Cybersecurity Advisory | AA24-038A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-038a"
+    },
+    {
+        "Title": "Known Indicators of Compromise Associated with Androxgh0st Malware",
+        "Advisory Date": "2024-01-16",
+        "Alert Code": "Cybersecurity Advisory | AA24-016A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-016a"
+    },
+    {
+        "Title": "#StopRansomware: ALPHV Blackcat",
+        "Advisory Date": "2023-12-19",
+        "Alert Code": "Cybersecurity Advisory | AA23-353A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-353a"
+    },
+    {
+        "Title": "#StopRansomware: Play Ransomware",
+        "Advisory Date": "2023-12-18",
+        "Alert Code": "Cybersecurity Advisory | AA23-352A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-352a"
+    },
+    {
+        "Title": "Enhancing Cyber Resilience: Insights from the CISA Healthcare and Public Health Sector Risk and Vulnerability Assessment",
+        "Advisory Date": "2023-12-15",
+        "Alert Code": "Cybersecurity Advisory | AA23-349A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-349a"
+    },
+    {
+        "Title": "Russian Foreign Intelligence Service (SVR) Exploiting JetBrains TeamCity CVE Globally",
+        "Advisory Date": "2023-12-13",
+        "Alert Code": "Cybersecurity Advisory | AA23-347A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-347a"
+    },
+    {
+        "Title": "Russian FSB Cyber Actor Star Blizzard Continues Worldwide Spear-phishing Campaigns",
+        "Advisory Date": "2023-12-07",
+        "Alert Code": "Cybersecurity Advisory | AA23-341A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-341a"
+    },
+    {
+        "Title": "Threat Actors Exploit Adobe ColdFusion CVE-2023-26360 for Initial Access to Government Servers",
+        "Advisory Date": "2023-12-05",
+        "Alert Code": "Cybersecurity Advisory | AA23-339A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-339a"
+    },
+    {
+        "Title": "IRGC-Affiliated Cyber Actors Exploit PLCs in Multiple Sectors, Including U.S. Water and Wastewater Systems Facilities",
+        "Advisory Date": "2023-12-01",
+        "Alert Code": "Cybersecurity Advisory | AA23-335A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-335a"
+    },
+    {
+        "Title": "#StopRansomware: LockBit 3.0 Ransomware Affiliates Exploit CVE 2023-4966 Citrix Bleed Vulnerability",
+        "Advisory Date": "2023-11-21",
+        "Alert Code": "Cybersecurity Advisory | AA23-325A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-325a"
+    },
+    {
+        "Title": "Scattered Spider",
+        "Advisory Date": "2023-11-16",
+        "Alert Code": "Cybersecurity Advisory | AA23-320A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-320a"
+    },
+    {
+        "Title": "#StopRansomware: Rhysida Ransomware",
+        "Advisory Date": "2023-11-15",
+        "Alert Code": "Cybersecurity Advisory | AA23-319A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-319a"
+    },
+    {
+        "Title": "Threat Actors Exploit Atlassian Confluence CVE-2023-22515 for Initial Access to Networks",
+        "Advisory Date": "2023-10-16",
+        "Alert Code": "Cybersecurity Advisory | AA23-289A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-289a"
+    },
+    {
+        "Title": "#StopRansomware: AvosLocker Ransomware (Update)",
+        "Advisory Date": "2023-10-11",
+        "Alert Code": "Cybersecurity Advisory | AA23-284A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-284a"
+    },
+    {
+        "Title": "NSA and CISA Red and Blue Teams Share Top Ten Cybersecurity Misconfigurations",
+        "Advisory Date": "2023-10-05",
+        "Alert Code": "Cybersecurity Advisory | AA23-278A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-278a"
+    },
+    {
+        "Title": "People's Republic of China-Linked Cyber Actors Hide in Router Firmware",
+        "Advisory Date": "2023-09-27",
+        "Alert Code": "Cybersecurity Advisory | AA23-270A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-270a"
+    },
+    {
+        "Title": "#StopRansomware: Snatch Ransomware",
+        "Advisory Date": "2023-09-20",
+        "Alert Code": "Cybersecurity Advisory | AA23-263A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-263a"
+    },
+    {
+        "Title": "Multiple Nation-State Threat Actors Exploit CVE-2022-47966 and CVE-2022-42475",
+        "Advisory Date": "2023-09-07",
+        "Alert Code": "Cybersecurity Advisory | AA23-250A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-250a"
+    },
+    {
+        "Title": "Identification and Disruption of QakBot Infrastructure",
+        "Advisory Date": "2023-08-30",
+        "Alert Code": "Cybersecurity Advisory | AA23-242A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-242a"
+    },
+    {
+        "Title": "2022 Top Routinely Exploited Vulnerabilities",
+        "Advisory Date": "2023-08-03",
+        "Alert Code": "Cybersecurity Advisory | AA23-215A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-215a"
+    },
+    {
+        "Title": "Threat Actors Exploiting Ivanti EPMM Vulnerabilities",
+        "Advisory Date": "2023-08-01",
+        "Alert Code": "Cybersecurity Advisory | AA23-213A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-213a"
+    },
+    {
+        "Title": "Preventing Web Application Access Control Abuse",
+        "Advisory Date": "2023-07-27",
+        "Alert Code": "Cybersecurity Advisory | AA23-208A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-208a"
+    },
+    {
+        "Title": "Threat Actors Exploiting Citrix CVE-2023-3519 to Implant Webshells",
+        "Advisory Date": "2023-07-20",
+        "Alert Code": "Cybersecurity Advisory | AA23-201A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-201a"
+    },
+    {
+        "Title": "Enhanced Monitoring to Detect APT Activity Targeting Outlook Online",
+        "Advisory Date": "2023-07-12",
+        "Alert Code": "Cybersecurity Advisory | AA23-193A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-193a"
+    },
+    {
+        "Title": "Increased Truebot Activity Infects U.S. and Canada Based Networks",
+        "Advisory Date": "2023-07-06",
+        "Alert Code": "Cybersecurity Advisory | AA23-187A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-187a"
+    },
+    {
+        "Title": "Understanding Ransomware Threat Actors: LockBit",
+        "Advisory Date": "2023-06-14",
+        "Alert Code": "Cybersecurity Advisory | AA23-165A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-165a"
+    },
+    {
+        "Title": "#StopRansomware: CL0P Ransomware Gang Exploits CVE-2023-34362 MOVEit Vulnerability",
+        "Advisory Date": "2023-06-07",
+        "Alert Code": "Cybersecurity Advisory | AA23-158A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-158a"
+    },
+    {
+        "Title": "People's Republic of China State-Sponsored Cyber Actor Living off the Land to Evade Detection",
+        "Advisory Date": "2023-05-24",
+        "Alert Code": "Cybersecurity Advisory | AA23-144a",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-144a"
+    },
+    {
+        "Title": "#StopRansomware: BianLian Ransomware Group",
+        "Advisory Date": "2023-05-16",
+        "Alert Code": "Cybersecurity Advisory | AA23-136A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-136a"
+    },
+    {
+        "Title": "Malicious Actors Exploit CVE-2023-27350 in PaperCut MF and NG",
+        "Advisory Date": "2023-05-11",
+        "Alert Code": "Cybersecurity Advisory | AA23-131A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-131a"
+    },
+    {
+        "Title": "Hunting Russian Intelligence \u201cSnake\u201d Malware",
+        "Advisory Date": "2023-05-09",
+        "Alert Code": "Cybersecurity Advisory | AA23-129A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-129a"
+    },
+    {
+        "Title": "APT28 Exploits Known Vulnerability to Carry Out Reconnaissance and Deploy Malware on Cisco Routers",
+        "Advisory Date": "2023-04-18",
+        "Alert Code": "Cybersecurity Advisory | AA23-108",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-108"
+    },
+    {
+        "Title": "#StopRansomware: LockBit 3.0",
+        "Advisory Date": "2023-03-16",
+        "Alert Code": "Cybersecurity Advisory | AA23-075A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-075a"
+    },
+    {
+        "Title": "Threat Actors Exploit Progress Telerik Vulnerabilities in Multiple U.S. Government IIS Servers",
+        "Advisory Date": "2023-03-15",
+        "Alert Code": "Cybersecurity Advisory | AA23-074A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-074a"
+    },
+    {
+        "Title": "#StopRansomware: Royal Ransomware",
+        "Advisory Date": "2023-03-02",
+        "Alert Code": "Cybersecurity Advisory | AA23-061A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-061a"
+    },
+    {
+        "Title": "CISA Red Team Shares Key Findings to Improve Monitoring and Hardening of Networks",
+        "Advisory Date": "2023-02-28",
+        "Alert Code": "Cybersecurity Advisory | AA23-059A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-059a"
+    },
+    {
+        "Title": "#StopRansomware: Ransomware Attacks on Critical Infrastructure Fund DPRK Malicious Cyber Activities",
+        "Advisory Date": "2023-02-09",
+        "Alert Code": "Cybersecurity Advisory | AA23-040A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-040a"
+    },
+    {
+        "Title": "ESXiArgs Ransomware Virtual Machine Recovery Guidance",
+        "Advisory Date": "2023-02-08",
+        "Alert Code": "Cybersecurity Advisory | AA23-039A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-039a"
+    },
+    {
+        "Title": "Protecting Against Malicious Use of Remote Monitoring and Management Software",
+        "Advisory Date": "2023-01-25",
+        "Alert Code": "Cybersecurity Advisory | AA23-025A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-025a"
+    },
+    {
+        "Title": "#StopRansomware: Cuba Ransomware",
+        "Advisory Date": "2022-12-01",
+        "Alert Code": "Cybersecurity Advisory | AA22-335A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-335a"
+    },
+    {
+        "Title": "#StopRansomware: Hive Ransomware",
+        "Advisory Date": "2022-11-17",
+        "Alert Code": "Cybersecurity Advisory | AA22-321A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-321a"
+    },
+    {
+        "Title": "Iranian Government-Sponsored APT Actors Compromise Federal Network, Deploy Crypto Miner, Credential Harvester",
+        "Advisory Date": "2022-11-16",
+        "Alert Code": "Cybersecurity Advisory | AA22-320A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-320a"
+    },
+    {
+        "Title": "#StopRansomware: Daixin Team",
+        "Advisory Date": "2022-10-21",
+        "Alert Code": "Cybersecurity Advisory | AA22-294A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-294a"
+    },
+    {
+        "Title": "Top CVEs Actively Exploited By People\u2019s Republic of China State-Sponsored Cyber Actors",
+        "Advisory Date": "2022-10-06",
+        "Alert Code": "Cybersecurity Advisory | AA22-279A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-279a"
+    },
+    {
+        "Title": "Impacket and Exfiltration Tool Used to Steal Sensitive Information from Defense Industrial Base Organization",
+        "Advisory Date": "2022-10-04",
+        "Alert Code": "Cybersecurity Advisory | AA22-277A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-277a"
+    },
+    {
+        "Title": "Control System Defense: Know the Opponent",
+        "Advisory Date": "2022-09-22",
+        "Alert Code": "Cybersecurity Advisory | AA22-265A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-265a"
+    },
+    {
+        "Title": "Iranian State Actors Conduct Cyber Operations Against the Government of Albania",
+        "Advisory Date": "2022-09-21",
+        "Alert Code": "Cybersecurity Advisory | AA22-264A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-264a"
+    },
+    {
+        "Title": "Iranian Islamic Revolutionary Guard Corps-Affiliated Cyber Actors Exploiting Vulnerabilities for Data Extortion and Disk Encryption for Ransom Operations",
+        "Advisory Date": "2022-09-14",
+        "Alert Code": "Cybersecurity Advisory | AA22-257A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-257a"
+    },
+    {
+        "Title": "#StopRansomware: Vice Society",
+        "Advisory Date": "2022-09-06",
+        "Alert Code": "Cybersecurity Advisory | AA22-249A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-249a"
+    },
+    {
+        "Title": "#StopRansomware: Vice Society",
+        "Advisory Date": "2022-09-06",
+        "Alert Code": "Cybersecurity Advisory | AA22-249A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-249a-0"
+    },
+    {
+        "Title": "Threat Actors Exploiting Multiple CVEs Against Zimbra Collaboration Suite",
+        "Advisory Date": "2022-08-16",
+        "Alert Code": "Cybersecurity Advisory | AA22-228A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-228a"
+    },
+    {
+        "Title": "#StopRansomware: Zeppelin Ransomware",
+        "Advisory Date": "2022-08-11",
+        "Alert Code": "Cybersecurity Advisory | AA22-223A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-223a"
+    },
+    {
+        "Title": "2021 Top Malware Strains",
+        "Advisory Date": "2022-08-04",
+        "Alert Code": "Cybersecurity Advisory | AA22-216A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-216a"
+    },
+    {
+        "Title": "North Korean State-Sponsored Cyber Actors Use Maui Ransomware to Target the Healthcare and Public Health Sector",
+        "Advisory Date": "2022-07-06",
+        "Alert Code": "Cybersecurity Advisory | AA22-187A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-187a"
+    },
+    {
+        "Title": "#StopRansomware: MedusaLocker",
+        "Advisory Date": "2022-06-30",
+        "Alert Code": "Cybersecurity Advisory | AA22-181A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-181a"
+    },
+    {
+        "Title": "Malicious Cyber Actors Continue to Exploit Log4Shell in VMware Horizon Systems",
+        "Advisory Date": "2022-06-23",
+        "Alert Code": "Cybersecurity Advisory | AA22-174A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-174a"
+    },
+    {
+        "Title": "People\u2019s Republic of China State-Sponsored Cyber Actors Exploit Network Providers and Devices",
+        "Advisory Date": "2022-06-07",
+        "Alert Code": "Cybersecurity Advisory | AA22-158A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-158a"
+    },
+    {
+        "Title": "Karakurt Data Extortion Group",
+        "Advisory Date": "2022-06-01",
+        "Alert Code": "Cybersecurity Advisory | AA22-152A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-152a"
+    },
+    {
+        "Title": "Threat Actors Chaining Unpatched VMware Vulnerabilities for Full System Control",
+        "Advisory Date": "2022-05-18",
+        "Alert Code": "Cybersecurity Advisory | AA22-138B",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-138b"
+    },
+    {
+        "Title": "Threat Actors Exploiting F5 BIG-IP CVE-2022-1388",
+        "Advisory Date": "2022-05-18",
+        "Alert Code": "Cybersecurity Advisory | AA22-138A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-138a"
+    },
+    {
+        "Title": "Weak Security Controls and Practices Routinely Exploited for Initial Access",
+        "Advisory Date": "2022-05-17",
+        "Alert Code": "Cybersecurity Advisory | AA22-137A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-137a"
+    },
+    {
+        "Title": "Protecting Against Cyber Threats to Managed Service Providers and their Customers",
+        "Advisory Date": "2022-05-11",
+        "Alert Code": "Cybersecurity Advisory | AA22-131A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-131a"
+    },
+    {
+        "Title": "2021 Top Routinely Exploited Vulnerabilities",
+        "Advisory Date": "2022-04-27",
+        "Alert Code": "Cybersecurity Advisory | AA22-117A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-117a"
+    },
+    {
+        "Title": "Russian State-Sponsored and Criminal Cyber Threats to Critical Infrastructure",
+        "Advisory Date": "2022-04-20",
+        "Alert Code": "Cybersecurity Advisory | AA22-110A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-110a"
+    },
+    {
+        "Title": "TraderTraitor: North Korean State-Sponsored APT Targets Blockchain Companies",
+        "Advisory Date": "2022-04-18",
+        "Alert Code": "Cybersecurity Advisory | AA22-108A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-108a"
+    },
+    {
+        "Title": "APT Cyber Tools Targeting ICS/SCADA Devices",
+        "Advisory Date": "2022-04-13",
+        "Alert Code": "Cybersecurity Advisory | AA22-103A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-103a"
+    },
+    {
+        "Title": "Tactics, Techniques, and Procedures of Indicted State-Sponsored Russian Cyber Actors Targeting the Energy Sector",
+        "Advisory Date": "2022-03-24",
+        "Alert Code": "Cybersecurity Advisory | AA22-083A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-083a"
+    },
+    {
+        "Title": "Strengthening Cybersecurity of SATCOM Network Providers and Customers",
+        "Advisory Date": "2022-03-17",
+        "Alert Code": "Cybersecurity Advisory | AA22-076A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-076a"
+    },
+    {
+        "Title": "Russian State-Sponsored Cyber Actors Gain Network Access by Exploiting Default Multifactor Authentication Protocols and \u201cPrintNightmare\u201d Vulnerability",
+        "Advisory Date": "2022-03-15",
+        "Alert Code": "Cybersecurity Advisory | AA22-074A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-074a"
+    },
+    {
+        "Title": "Update: Destructive Malware Targeting Organizations in Ukraine",
+        "Advisory Date": "2022-02-26",
+        "Alert Code": "Cybersecurity Advisory | AA22-057A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-057a"
+    },
+    {
+        "Title": "Iranian Government-Sponsored Actors Conduct Cyber Operations Against Global Government and Commercial Networks",
+        "Advisory Date": "2022-02-24",
+        "Alert Code": "Cybersecurity Advisory | AA22-055A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-055a"
+    },
+    {
+        "Title": "New Sandworm Malware Cyclops Blink Replaces VPNFilter",
+        "Advisory Date": "2022-02-23",
+        "Alert Code": "Cybersecurity Advisory | AA22-054A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-054a"
+    },
+    {
+        "Title": "Russian State-Sponsored Cyber Actors Target Cleared Defense Contractor Networks to Obtain Sensitive U.S. Defense Information and Technology",
+        "Advisory Date": "2022-02-16",
+        "Alert Code": "Cybersecurity Advisory | AA22-047A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-047a"
+    },
+    {
+        "Title": "2021 Trends Show Increased Globalized Threat of Ransomware",
+        "Advisory Date": "2022-02-09",
+        "Alert Code": "Cybersecurity Advisory | AA22-040A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-040a"
+    },
+    {
+        "Title": "Understanding and Mitigating Russian State-Sponsored Cyber Threats to U.S. Critical Infrastructure",
+        "Advisory Date": "2022-01-11",
+        "Alert Code": "Cybersecurity Advisory | AA22-011A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-011a"
+    },
+    {
+        "Title": "Mitigating Log4Shell and Other Log4j-Related Vulnerabilities",
+        "Advisory Date": "2021-12-22",
+        "Alert Code": "Cybersecurity Advisory | AA21-356A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-356a"
+    },
+    {
+        "Title": "APT Actors Exploiting CVE-2021-44077 in Zoho ManageEngine ServiceDesk Plus",
+        "Advisory Date": "2021-12-02",
+        "Alert Code": "Cybersecurity Advisory | AA21-336A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-336a"
+    },
+    {
+        "Title": "Iranian Government-Sponsored APT Cyber Actors Exploiting Microsoft Exchange and Fortinet Vulnerabilities in Furtherance of Malicious Activities",
+        "Advisory Date": "2021-11-17",
+        "Alert Code": "Cybersecurity Advisory | AA21-321A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-321a"
+    },
+    {
+        "Title": "BlackMatter Ransomware",
+        "Advisory Date": "2021-10-18",
+        "Alert Code": "Cybersecurity Advisory | AA21-291A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-291a"
+    },
+    {
+        "Title": "Ongoing Cyber Threats to U.S. Water and Wastewater Systems",
+        "Advisory Date": "2021-10-14",
+        "Alert Code": "Cybersecurity Advisory | AA21-287A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-287a"
+    },
+    {
+        "Title": "APT Actors Exploiting Newly Identified Vulnerability in ManageEngine ADSelfService Plus",
+        "Advisory Date": "2021-09-16",
+        "Alert Code": "Cybersecurity Advisory | AA21-259A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-259a"
+    },
+    {
+        "Title": "Ransomware Awareness for Holidays and Weekends",
+        "Advisory Date": "2021-08-31",
+        "Alert Code": "Cybersecurity Advisory | AA21-243A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-243a"
+    },
+    {
+        "Title": "BadAlloc Vulnerability Affecting BlackBerry QNX RTOS",
+        "Advisory Date": "2021-08-17",
+        "Alert Code": "Cybersecurity Advisory | AA21-229A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-229a"
+    },
+    {
+        "Title": "Top Routinely Exploited Vulnerabilities",
+        "Advisory Date": "2021-07-28",
+        "Alert Code": "Cybersecurity Advisory | AA21-209A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-209a"
+    },
+    {
+        "Title": "Chinese Gas Pipeline Intrusion Campaign, 2011 to 2013",
+        "Advisory Date": "2021-07-20",
+        "Alert Code": "Cybersecurity Advisory | AA21-201A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-201a"
+    },
+    {
+        "Title": "Tactics, Techniques, and Procedures of Indicted APT40 Actors Associated with China\u2019s MSS Hainan State Security Department",
+        "Advisory Date": "2021-07-19",
+        "Alert Code": "Cybersecurity Advisory | AA21-200A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-200a"
+    },
+    {
+        "Title": "Chinese State-Sponsored Cyber Operations: Observed TTPs",
+        "Advisory Date": "2021-07-19",
+        "Alert Code": "Cybersecurity Advisory | AA21-200B",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-200b"
+    },
+    {
+        "Title": "Sophisticated Spearphishing Campaign Targets Government Organizations, IGOs, and NGOs",
+        "Advisory Date": "2021-05-28",
+        "Alert Code": "Cybersecurity Advisory | AA21-148A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-148a"
+    },
+    {
+        "Title": "DarkSide Ransomware: Best Practices for Preventing Business Disruption from Ransomware Attacks",
+        "Advisory Date": "2021-05-11",
+        "Alert Code": "Cybersecurity Advisory | AA21-131A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-131a"
+    },
+    {
+        "Title": "Russian Foreign Intelligence Service (SVR) Cyber Operations: Trends and Best Practices for Network Defenders",
+        "Advisory Date": "2021-04-26",
+        "Alert Code": "Cybersecurity Advisory | AA21-116A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-116a"
+    },
+    {
+        "Title": "Exploitation of Pulse Connect Secure Vulnerabilities",
+        "Advisory Date": "2021-04-20",
+        "Alert Code": "Cybersecurity Advisory | AA21-110A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-110a"
+    },
+    {
+        "Title": "Detecting Post-Compromise Threat Activity Using the CHIRP IOC Detection Tool",
+        "Advisory Date": "2021-03-18",
+        "Alert Code": "Cybersecurity Advisory | AA21-077A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-077a"
+    },
+    {
+        "Title": "TrickBot Malware",
+        "Advisory Date": "2021-03-17",
+        "Alert Code": "Cybersecurity Advisory | AA21-076A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-076a"
+    },
+    {
+        "Title": "Mitigate Microsoft Exchange Server Vulnerabilities",
+        "Advisory Date": "2021-03-03",
+        "Alert Code": "Cybersecurity Advisory | AA21-062A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-062a"
+    },
+    {
+        "Title": "Exploitation of Accellion File Transfer Appliance",
+        "Advisory Date": "2021-02-24",
+        "Alert Code": "Cybersecurity Advisory | AA21-055A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-055a"
+    },
+    {
+        "Title": "AppleJeus: Analysis of North Korea\u2019s Cryptocurrency Malware",
+        "Advisory Date": "2021-02-17",
+        "Alert Code": "Cybersecurity Advisory | AA21-048A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-048a"
+    },
+    {
+        "Title": "Compromise of U.S. Water Treatment Facility",
+        "Advisory Date": "2021-02-11",
+        "Alert Code": "Cybersecurity Advisory | AA21-042A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-042a"
+    },
+    {
+        "Title": "Detecting Post-Compromise Threat Activity in Microsoft Cloud Environments",
+        "Advisory Date": "2021-01-08",
+        "Alert Code": "Cybersecurity Advisory | AA21-008A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-008a"
+    },
+    {
+        "Title": "Advanced Persistent Threat Compromise of Government Agencies, Critical Infrastructure, and Private Sector Organizations",
+        "Advisory Date": "2020-12-17",
+        "Alert Code": "Cybersecurity Advisory | AA20-352A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-352a"
+    },
+    {
+        "Title": "Cyber Actors Target K-12 Distance Learning Education to Cause Disruptions and Steal Data",
+        "Advisory Date": "2020-12-10",
+        "Alert Code": "Cybersecurity Advisory | AA20-345A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-345a"
+    },
+    {
+        "Title": "Advanced Persistent Threat Actors Targeting U.S. Think Tanks",
+        "Advisory Date": "2020-12-01",
+        "Alert Code": "Cybersecurity Advisory | AA20-336A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-336a"
+    },
+    {
+        "Title": "Iranian Advanced Persistent Threat Actor Identified Obtaining Voter Registration Data",
+        "Advisory Date": "2020-10-30",
+        "Alert Code": "Cybersecurity Advisory | AA20-304A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-304a"
+    },
+    {
+        "Title": "Ransomware Activity Targeting the Healthcare and Public Health Sector",
+        "Advisory Date": "2020-10-28",
+        "Alert Code": "Cybersecurity Advisory | AA20-302A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-302a"
+    },
+    {
+        "Title": "North Korean Advanced Persistent Threat Focus: Kimsuky",
+        "Advisory Date": "2020-10-27",
+        "Alert Code": "Cybersecurity Advisory | AA20-301A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-301a"
+    },
+    {
+        "Title": "Iranian Advanced Persistent Threat Actors Threaten Election-Related Systems",
+        "Advisory Date": "2020-10-22",
+        "Alert Code": "Cybersecurity Advisory | AA20-296B",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-296b"
+    },
+    {
+        "Title": "Russian State-Sponsored Advanced Persistent Threat Actor Compromises U.S. Government Targets",
+        "Advisory Date": "2020-10-22",
+        "Alert Code": "Cybersecurity Advisory | AA20-296A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-296a"
+    },
+    {
+        "Title": "APT Actors Chaining Vulnerabilities Against SLTT, Critical Infrastructure, and Elections Organizations",
+        "Advisory Date": "2020-10-09",
+        "Alert Code": "Cybersecurity Advisory | AA20-283A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-283a"
+    },
+    {
+        "Title": "Emotet Malware",
+        "Advisory Date": "2020-10-06",
+        "Alert Code": "Cybersecurity Advisory | AA20-280A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-280a"
+    },
+    {
+        "Title": "Potential for China Cyber Response to Heightened U.S.\u2013China Tensions",
+        "Advisory Date": "2020-10-01",
+        "Alert Code": "Cybersecurity Advisory | AA20-275A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-275a"
+    },
+    {
+        "Title": "LokiBot Malware",
+        "Advisory Date": "2020-09-22",
+        "Alert Code": "Cybersecurity Advisory | AA20-266A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-266a"
+    },
+    {
+        "Title": "Iran-Based Threat Actor Exploits VPN Vulnerabilities",
+        "Advisory Date": "2020-09-15",
+        "Alert Code": "Cybersecurity Advisory | AA20-259A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-259a"
+    },
+    {
+        "Title": "Chinese Ministry of State Security-Affiliated Cyber Threat Actor Activity",
+        "Advisory Date": "2020-09-14",
+        "Alert Code": "Cybersecurity Advisory | AA20-258A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-258a"
+    },
+    {
+        "Title": "Technical Approaches to Uncovering and Remediating Malicious Activity",
+        "Advisory Date": "2020-09-01",
+        "Alert Code": "Cybersecurity Advisory | AA20-245A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-245a"
+    },
+    {
+        "Title": "FASTCash 2.0: North Korea's BeagleBoyz Robbing Banks",
+        "Advisory Date": "2020-08-26",
+        "Alert Code": "Cybersecurity Advisory | AA20-239A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-239a"
+    },
+    {
+        "Title": "Phishing Emails Used to Deploy KONNI Malware",
+        "Advisory Date": "2020-08-14",
+        "Alert Code": "Cybersecurity Advisory | AA20-227A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-227a"
+    },
+    {
+        "Title": "Malicious Cyber Actor Spoofing COVID-19 Loan Relief Webpage via Phishing Emails",
+        "Advisory Date": "2020-08-12",
+        "Alert Code": "Cybersecurity Advisory | AA20-225A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-225a"
+    },
+    {
+        "Title": "Potential Legacy Risk from Malware Targeting QNAP NAS Devices",
+        "Advisory Date": "2020-07-27",
+        "Alert Code": "Cybersecurity Advisory | AA20-209A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-209a"
+    },
+    {
+        "Title": "Threat Actor Exploitation of F5 BIG-IP CVE-2020-5902",
+        "Advisory Date": "2020-07-24",
+        "Alert Code": "Cybersecurity Advisory | AA20-206A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-206a"
+    },
+    {
+        "Title": "NSA and CISA Recommend Immediate Actions to Reduce Exposure Across Operational Technologies and Control Systems",
+        "Advisory Date": "2020-07-23",
+        "Alert Code": "Cybersecurity Advisory | AA20-205A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-205a"
+    },
+    {
+        "Title": "Malicious Cyber Actor Use of Network Tunneling and Spoofing to Obfuscate Geolocation",
+        "Advisory Date": "2020-07-16",
+        "Alert Code": "Cybersecurity Advisory | AA20-198A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-198a"
+    },
+    {
+        "Title": "Critical Vulnerability in SAP NetWeaver AS Java",
+        "Advisory Date": "2020-07-13",
+        "Alert Code": "Cybersecurity Advisory | AA20-195A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-195a"
+    },
+    {
+        "Title": "Defending Against Malicious Cyber Activity Originating from Tor",
+        "Advisory Date": "2020-07-01",
+        "Alert Code": "Cybersecurity Advisory | AA20-183A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-183a"
+    },
+    {
+        "Title": "EINSTEIN Data Trends \u2013 30-day Lookback",
+        "Advisory Date": "2020-06-30",
+        "Alert Code": "Cybersecurity Advisory | AA20-182A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-182a"
+    },
+    {
+        "Title": "Top 10 Routinely Exploited Vulnerabilities",
+        "Advisory Date": "2020-05-12",
+        "Alert Code": "Cybersecurity Advisory | AA20-133A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-133a"
+    },
+    {
+        "Title": "APT Groups Target Healthcare and Essential Services",
+        "Advisory Date": "2020-05-05",
+        "Alert Code": "Cybersecurity Advisory | AA20-126A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-126a"
+    },
+    {
+        "Title": "Microsoft Office 365 Security Recommendations",
+        "Advisory Date": "2020-04-29",
+        "Alert Code": "Cybersecurity Advisory | AA20-120A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-120a"
+    },
+    {
+        "Title": "Continued Threat Actor Exploitation Post Pulse Secure VPN Patching",
+        "Advisory Date": "2020-04-16",
+        "Alert Code": "Cybersecurity Advisory | AA20-107A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-107a"
+    },
+    {
+        "Title": "Guidance on the North Korean Cyber Threat",
+        "Advisory Date": "2020-04-15",
+        "Alert Code": "Cybersecurity Advisory | AA20-106A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-106a"
+    },
+    {
+        "Title": "COVID-19 Exploited by Malicious Cyber Actors",
+        "Advisory Date": "2020-04-08",
+        "Alert Code": "Cybersecurity Advisory | AA20-099A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-099a"
+    },
+    {
+        "Title": "Enterprise VPN Security",
+        "Advisory Date": "2020-03-13",
+        "Alert Code": "Cybersecurity Advisory | AA20-073A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-073a"
+    },
+    {
+        "Title": "Ransomware Impacting Pipeline Operations",
+        "Advisory Date": "2020-02-18",
+        "Alert Code": "Cybersecurity Advisory | AA20-049A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-049a"
+    },
+    {
+        "Title": "Detecting Citrix CVE-2019-19781",
+        "Advisory Date": "2020-01-31",
+        "Alert Code": "Cybersecurity Advisory | AA20-031A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-031a"
+    },
+    {
+        "Title": "Critical Vulnerability in Citrix Application Delivery Controller, Gateway, and SD-WAN WANOP",
+        "Advisory Date": "2020-01-20",
+        "Alert Code": "Cybersecurity Advisory | AA20-020A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-020a"
+    },
+    {
+        "Title": "Critical Vulnerabilities in Microsoft Windows Operating Systems",
+        "Advisory Date": "2020-01-14",
+        "Alert Code": "Cybersecurity Advisory | AA20-014A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-014a"
+    },
+    {
+        "Title": "Continued Exploitation of Pulse Secure VPN Vulnerability",
+        "Advisory Date": "2020-01-10",
+        "Alert Code": "Cybersecurity Advisory | AA20-010A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-010a"
+    },
+    {
+        "Title": "Potential for Iranian Cyber Response to U.S. Military Strike in Baghdad",
+        "Advisory Date": "2020-01-06",
+        "Alert Code": "Cybersecurity Advisory | AA20-006A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-006a"
+    },
+    {
+        "Title": "Dridex Malware",
+        "Advisory Date": "2019-12-05",
+        "Alert Code": "Cybersecurity Advisory | AA19-339A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa19-339a"
+    },
+    {
+        "Title": "Microsoft Ending Support for Windows 7 and Windows Server 2008 R2",
+        "Advisory Date": "2019-10-17",
+        "Alert Code": "Cybersecurity Advisory | AA19-290A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa19-290a"
+    },
+    {
+        "Title": "Microsoft Operating Systems BlueKeep Vulnerability",
+        "Advisory Date": "2019-06-17",
+        "Alert Code": "Cybersecurity Advisory | AA19-168A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa19-168a"
+    },
+    {
+        "Title": "New Exploits for Unsecure SAP Systems",
+        "Advisory Date": "2019-05-02",
+        "Alert Code": "Cybersecurity Advisory | AA19-122A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa19-122a"
+    },
+    {
+        "Title": "DNS Infrastructure Hijacking Campaign",
+        "Advisory Date": "2019-01-24",
+        "Alert Code": "Cybersecurity Advisory | AA19-024A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa19-024a"
+    },
+    {
+        "Title": "SamSam Ransomware",
+        "Advisory Date": "2018-12-03",
+        "Alert Code": "Cybersecurity Advisory | AA18-337A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa18-337a"
+    },
+    {
+        "Title": "Publicly Available Tools Seen in Cyber Incidents Worldwide",
+        "Advisory Date": "2018-10-11",
+        "Alert Code": "Cybersecurity Advisory | AA18-284A",
+        "Link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa18-284a"
+    }
+]
