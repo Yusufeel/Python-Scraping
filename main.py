@@ -58,19 +58,19 @@ def scrape_all_advisories(start_date: datetime, end_date: datetime) -> list:
 def main():
     while True:
         try:
-            start_date_str = input("Enter start date (YYYY-MM-DD): ")
+            start_date_str = input("Başlangıç Tarihini Girin (YYYY-AA-GG): ")
             start_date = datetime.strptime(start_date_str, '%Y-%m-%d')
             break
         except ValueError:
-            print("Invalid start date format, try again.")
+            print("Geçersiz başlangıç tarihi,tekrar deneyin.")
 
     while True:
         try:
-            end_date_str = input("Enter end date (YYYY-MM-DD): ")
+            end_date_str = input("Bitiş Tarihini Seçin (YYYY-AA-GG): ")
             end_date = datetime.strptime(end_date_str, '%Y-%m-%d')
             break
         except ValueError:
-            print("Invalid end date format, try again.")
+            print("Geçersiz bitiş tarihi,tekrar deneyin.")
 
     all_data = scrape_all_advisories(start_date, end_date)
 
