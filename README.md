@@ -2,7 +2,7 @@
 
 This Python script fetches cybersecurity advisories data from the CISA (Cybersecurity and Infrastructure Security Agency) website and saves it in JSON format.
 
-## How It Works
+## Script Overview and Functionality
 
 1. It utilizes the `requests`, `BeautifulSoup`, `datetime`, and `json` libraries.
 2. HTTP requests (`requests`) are sent to fetch data from the CISA website.
