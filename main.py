@@ -2,8 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 import json
-
-BASE_URL = 'https://www.cisa.gov/news-events/cybersecurity-advisories?f%5B0%5D=advisory_type%3A94&page={}'
+import os
 
 def parse_advisory_date(date_string: str) -> datetime:
     return datetime.strptime(date_string, '%b %d, %Y')
@@ -44,7 +43,7 @@ def scrape_all_advisories(start_date: datetime, end_date: datetime) -> list:
     page_num = 0
 
     while True:
-        url = BASE_URL.format(page_num)
+        url = f'https://www.cisa.gov/news-events/cybersecurity-advisories?f%5B0%5D=advisory_type%3A94&page={page_num}'
         page_data = scrape_advisories_from_page(url)
         if not page_data:
             break
@@ -54,6 +53,35 @@ def scrape_all_advisories(start_date: datetime, end_date: datetime) -> list:
     filtered_data = [item for item in all_data if start_date <= datetime.strptime(item["Advisory Date"], '%Y-%m-%d') <= end_date]
 
     return filtered_data
+
+def save_advisories_to_json(advisories, date_folder):
+    if not os.path.exists(date_folder):
+        os.makedirs(date_folder)
+
+    for idx, advisory in enumerate(advisories):
+        advisory_filename = f"{advisory['Title']}-{idx}.json"
+        output_folder = os.path.join(date_folder, advisory['Advisory Date'])
+
+        if not os.path.exists(output_folder):
+            os.makedirs(output_folder)
+
+        date_subfolder = os.path.join(output_folder, os.path.basename(advisory['Link']))
+
+        if not os.path.exists(date_subfolder):
+            os.makedirs(date_subfolder)
+
+        sub_folder = os.path.join(date_subfolder, os.path.basename(advisory['Link'].split('/')[0]))
+
+        if not os.path.exists(sub_folder):
+            os.makedirs(sub_folder)
+
+        output_path = os.path.join(sub_folder, advisory_filename)
+
+        if not os.path.exists(os.path.dirname(output_path)):
+            os.makedirs(os.path.dirname(output_path))
+
+        with open(output_path, 'w') as f:
+            json.dump(advisory, f, indent=4)
 
 def main():
     while True:
@@ -74,10 +102,9 @@ def main():
 
     all_data = scrape_all_advisories(start_date, end_date)
 
-    with open('advisories.json', 'w') as f:
-        json.dump(all_data, f, indent=4)
+    save_advisories_to_json(all_data, 'cisa_advisories')
 
-    print("Veri başarıyla advisories.json dosyasına kaydedildi.")
+    print("Veri başarıyla cisa\_advisories klasörüne kaydedildi.")
 
 if __name__ == '__main__':
     main()
