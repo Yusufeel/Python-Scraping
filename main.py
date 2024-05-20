@@ -53,6 +53,9 @@ def scrape_all_advisories(start_date: datetime, end_date: datetime) -> list:
 
     filtered_data = [item for item in all_data if start_date <= datetime.strptime(item["Advisory Date"], '%Y-%m-%d') <= end_date]
 
+    print(f"Toplam {len(all_data)} advisory scrape edildi.")  # Toplam advisory sayısını yazdırma
+    print(f"Filtrelenen advisory sayısı: {len(filtered_data)}")  # Filtrelenen advisory sayısını yazdırma
+
     return filtered_data
 
 def main():
@@ -62,7 +65,7 @@ def main():
             start_date = datetime.strptime(start_date_str, '%Y-%m-%d')
             break
         except ValueError:
-            print("Geçersiz başlangıç tarihi,tekrar deneyin.")
+            print("Geçersiz başlangıç tarihi, tekrar deneyin.")
 
     while True:
         try:
@@ -70,14 +73,14 @@ def main():
             end_date = datetime.strptime(end_date_str, '%Y-%m-%d')
             break
         except ValueError:
-            print("Geçersiz bitiş tarihi,tekrar deneyin.")
+            print("Geçersiz bitiş tarihi, tekrar deneyin.")
 
     all_data = scrape_all_advisories(start_date, end_date)
 
     with open('advisories.json', 'w') as f:
         json.dump(all_data, f, indent=4)
 
-    print("Veri başarıyla advisories.json dosyasına kaydedildi.")
+    print(f"Veri başarıyla advisories.json dosyasına kaydedildi. Toplam {len(all_data)} advisory scrape edildi.")  # Scrape edilen advisory sayısını yazdırma
 
 if __name__ == '__main__':
     main()
