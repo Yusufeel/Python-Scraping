@@ -94,7 +94,7 @@ def main():
 
     while True:
         try:
-            end_date_str = input("Bitiş Tarihini Seçin (YYYY-AA-GG): ")
+            end_date_str = input("Bitiş Tarihini Girin (YYYY-AA-GG): ")
             end_date = datetime.strptime(end_date_str, '%Y-%m-%d')
             break
         except ValueError:
