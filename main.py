@@ -34,6 +34,16 @@ def scrape_advisories_from_page(url: str) -> list:
             "Alert Code": alert_code,
             "Link": full_link
         }
+
+        # Scrape paragraph summary from full link
+        response = requests.get(full_link)
+        soup = BeautifulSoup(response.content, 'html.parser')
+        paragraphs = soup.find_all('p')
+        summary = ''
+        for paragraph in paragraphs:
+            summary += paragraph.text.strip() + ' '
+        advisory_data['Summary'] = summary
+
         data.append(advisory_data)
 
     return data
