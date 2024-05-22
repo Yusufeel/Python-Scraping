@@ -9,11 +9,8 @@ def parse_advisory_date(date_string: str) -> datetime:
     return datetime.strptime(date_string, '%b %d, %Y')
 
 def clean_html_text(text):
-    # Özel karakterler ve boşlukları temizle
     cleaned_text = re.sub(r'[\u00a0\u2022\u2019\u00ae\t\n]+', ' ', text)
-    # Ekstra boşlukları temizle
     cleaned_text = re.sub(r'\s+', ' ', cleaned_text)
-    # Başta ve sonda kalan boşlukları temizle
     cleaned_text = cleaned_text.strip()
     return cleaned_text
 
