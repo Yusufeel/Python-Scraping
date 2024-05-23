@@ -1,0 +1,239 @@
+{
+    "title": "Enhanced Monitoring to Detect APT Activity Targeting Outlook Online",
+    "advisory_date": "2023-07-12",
+    "alert_code": "Cybersecurity Advisory | AA23-193A",
+    "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-193a",
+    "content": [
+        {
+            "type": "section",
+            "datatitle": "SUMMARY",
+            "data": [
+                {
+                    "type": "paragraph",
+                    "data": "In June 2023, a Federal Civilian Executive Branch (FCEB) agency identified suspicious activity in their Microsoft 365 (M365) cloud environment. The agency reported the activity to Microsoft and the Cybersecurity and Infrastructure Security Agency (CISA), and Microsoft determined that advanced persistent threat (APT) actors accessed and exfiltrated unclassified Exchange Online Outlook data. CISA and the Federal Bureau of Investigation (FBI) are releasing this joint Cybersecurity Advisory to provide guidance to critical infrastructure organizations on enhancing monitoring of Microsoft Exchange Online environments. Organizations can enhance their cyber posture and position themselves to detect similar malicious activity by implementing logging recommendations in this advisory. Organizations that identify suspicious, anomalous activity should contact Microsoft for proceeding with mitigation actions due to the cloud-based infrastructure affected, as well as report to CISA and the FBI. Download the PDF version of this report:"
+                },
+                {
+                    "type": "file",
+                    "name": "AA23-193A Enhanced Monitoring to Detect APT Activity Targeting Outlook Online",
+                    "url": "https://www.cisa.gov/sites/default/files/2023-07/aa23-193a_joint_csa_enhanced_monitoring_to_detect_apt_activity_targeting_outlook_online_2.pdf"
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "datatitle": "TECHNICAL DETAILS",
+            "data": [
+                {
+                    "type": "paragraph",
+                    "data": "In Mid-June 2023, an FCEB agency observed MailItemsAccessed events with an unexpected ClientAppID and AppID in M365 Audit Logs. The MailItemsAccessed event is generated when licensed users access items in Exchange Online mailboxes using any connectivity protocol from any client. The FCEB agency deemed this activity suspicious because the observed AppId did not normally access mailbox items in their environment. The agency reported the activity to Microsoft and CISA. (Updated July 14, 2023) Microsoft determined that APT actors accessed and exfiltrated unclassified Exchange Online Outlook data from a small number of accounts. The APT actors used a Microsoft account (MSA) consumer key to forge tokens to impersonate consumer and enterprise users. Microsoft remediated the issue by first blocking tokens issued with the acquired key and then replacing the key to prevent continued misuse. Microsoft determined that this activity was part of a campaign targeting multiple organizations (all of which have been notified by Microsoft). [1] The affected FCEB agency identified suspicious activity by leveraging enhanced logging\u2014specifically of MailItemsAccessed events\u2014and an established baseline of normal Outlook activity (e.g., expected AppID). The MailItemsAccessed event enables detection of otherwise difficult to detect adversarial activity. CISA and FBI are not aware of other audit logs or events that would have detected this activity. Critical infrastructure organizations are strongly urged to implement the logging recommendations in this advisory to enhance their cybersecurity posture and position themselves to detect similar malicious activity."
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "datatitle": "LOGGING",
+            "data": [
+                {
+                    "type": "paragraph",
+                    "data": "CISA and the FBI strongly encourage critical infrastructure organizations to ensure audit logging is enabled. Note: Per CISA s Microsoft Exchange Online Microsoft 365 Minimum Viable Secure Configuration Baselines, FCEB agencies shall enable audit logging. These minimum viable secure configuration baselines are part of CISA s Secure Cloud Business Applications (SCuBA) Project, which provides guidance for FCEB agencies securing their cloud business application environments and protecting federal information created, accessed, shared, and stored in those environments. Although tailored to FCEB agencies, the project provides security guidance applicable to all organizations with cloud environments. The Office of Management and Budget (OMB) M-21-31 requires Microsoft audit logs be retained for at least twelve months in active storage and an additional eighteen months in cold storage. This can be accomplished either by offloading the logs out of the cloud environment or natively through Microsoft by creating an audit log retention policy. In addition to enabling audit logging, CISA and FBI strongly encourage organizations to:"
+                },
+                {
+                    "type": "list",
+                    "data": [
+                        "Enable Purview Audit (Premium) logging. This logging requires licensing at the G5/E5 level. See Microsoft\u2019s guidance on Assigning Microsoft 365 Licenses to Users for additional information.",
+                        "Ensure logs are searchable by operators. The relevant logs need to be accessible to operational teams in a platform (e.g., security operations center [SOC] tooling) that enables hunting for this activity and distinguishing it from expected behavior within the environment.",
+                        "Enable Microsoft 365 Unified Audit Logging (UAL). UAL should be enabled by default, but organizations are encouraged to validate these settings.",
+                        "Understand your organization\u2019s cloud baseline. Organizations are encouraged to look for outliers and become familiar with baseline patterns to better understand abnormal versus normal traffic."
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "datatitle": "GENERAL CLOUD MITIGATIONS",
+            "data": [
+                {
+                    "type": "paragraph",
+                    "data": "All mitigation actions for this activity are the responsibility of Microsoft due to the cloud-based infrastructure affected; however, CISA and the FBI recommend that critical infrastructure organizations implement the following to harden their cloud environments. Although, these mitigations will not prevent this or related activity where actors leverage compromised consumer keys, they will reduce the impact of less sophisticated malicious activity targeting cloud environments. Note: These mitigations align with CISA s SCuBA Technical Reference Architecture (TRA), which describes essential components of security services and capabilities to secure and harden cloud business applications, including the platforms hosting the applications."
+                },
+                {
+                    "type": "list",
+                    "data": [
+                        "Apply CISA\u2019s recommended baseline security configurations for Microsoft Defender for Office 365, Azure Active Directory, Exchange Online, OneDrive for Business, Power BI, Power Platform, SharePoint Online, and Teams [SCuBA TRA Section 6.6].",
+                        "Separate administrator accounts from user accounts according to the National Institute of Standards and Technology\u2019s (NIST\u2019s) guidance, AC-5: Separation of Duties. Only allow designated administrator accounts to be used for administration purposes. If an individual user requires administrative rights over their workstation, use a separate account without administrative access to other hosts.",
+                        "Collect and store access and security logs for secure cloud access (SCA) solutions, endpoint solutions, cloud applications/platforms and security services, such as firewalls, data loss prevention systems, and intrusion detection systems [SCuBA TRA Section 6.8.1].",
+                        "Use a telemetry hosting solution (e.g., SIEM solution) that aggregates logs and telemetry data to facilitate internal organization monitoring, auditing, alerting, and threat detection activities [SCuBA TRA Section 6.8.1].",
+                        "Review contractual relationships with all Cloud Service Providers (CSPs) and ensure contracts include:\n\nSecurity controls the customer deems appropriate.\nAppropriate monitoring and logging of provider-managed customer systems.\nAppropriate monitoring of the service provider\u2019s presence, activities, and connections to the customer network.\nNotification of confirmed or suspected activity.",
+                        "Security controls the customer deems appropriate.",
+                        "Appropriate monitoring and logging of provider-managed customer systems.",
+                        "Appropriate monitoring of the service provider\u2019s presence, activities, and connections to the customer network.",
+                        "Notification of confirmed or suspected activity."
+                    ]
+                },
+                {
+                    "type": "list",
+                    "data": [
+                        "Security controls the customer deems appropriate.",
+                        "Appropriate monitoring and logging of provider-managed customer systems.",
+                        "Appropriate monitoring of the service provider\u2019s presence, activities, and connections to the customer network.",
+                        "Notification of confirmed or suspected activity."
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "datatitle": "REPORTING SUSPICIOUS ACTIVITY",
+            "data": [
+                {
+                    "type": "paragraph",
+                    "data": "Organizations are encouraged to report suspicious activity to CISA via CISA s 24/7 Operations Center (report@cisa.gov or 888-282-0870). The FBI encourages recipients of this document to report information concerning suspicious or criminal activity to their local FBI field office or IC3.gov."
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "datatitle": "RESOURCES",
+            "data": [
+                {
+                    "type": "list",
+                    "data": [
+                        "CISA: Microsoft Exchange Online Microsoft 365 Minimum Viable Secure Configuration Baselines",
+                        "CISA: SCuBA Project",
+                        "Microsoft: Assigning Microsoft 365 Licenses to Users",
+                        "CISA: SCuBA TRA",
+                        "CISA: Recommended Baseline Security Configurations (Microsoft)\n\nDefender for Office 365\nAzure Active Directory\nExchange Online\nOneDrive for Business\nPower BI\nPower Platform\nSharePoint Online\nTeams",
+                        "Defender for Office 365",
+                        "Azure Active Directory",
+                        "Exchange Online",
+                        "OneDrive for Business",
+                        "Power BI",
+                        "Power Platform",
+                        "SharePoint Online",
+                        "Teams",
+                        "NIST: AC-5: Separation of Duties"
+                    ]
+                },
+                {
+                    "type": "list",
+                    "data": [
+                        "Defender for Office 365",
+                        "Azure Active Directory",
+                        "Exchange Online",
+                        "OneDrive for Business",
+                        "Power BI",
+                        "Power Platform",
+                        "SharePoint Online",
+                        "Teams"
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "data": "Update July 14, 2023:"
+                },
+                {
+                    "type": "list",
+                    "data": [
+                        "Microsoft: Microsoft Mitigates China-based Threat Actor Storm-0558 Targeting of Customer Email",
+                        "Microsoft: Mitigation for China-Based Threat Actor Activity",
+                        "Microsoft: Analysis of Storm-0558 Techniques for Unauthorized Email Access"
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "data": "End Update"
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "datatitle": "REFERENCES",
+            "data": [
+                {
+                    "type": "paragraph",
+                    "data": "[1] Microsoft Security Response Center (MSRC) blog: Microsoft mitigates China-based threat actor Storm-0558 targeting of customer email"
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "datatitle": "ACKNOWLEDGEMENTS",
+            "data": [
+                {
+                    "type": "paragraph",
+                    "data": "Microsoft contributed to this CSA."
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "datatitle": "DISCLAIMER",
+            "data": [
+                {
+                    "type": "paragraph",
+                    "data": "The information in this report is being provided \u201cas is\u201d for informational purposes only. The FBI, and CISA do not endorse any commercial product or service, including any subjects of analysis. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply endorsement, recommendation, or favoring by the FBI and CISA. This product is provided subject to this Notification and this Privacy & Use policy. We recently updated our anonymous product survey; we d welcome your feedback."
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "datatitle": "#StopRansomware: Black Basta",
+            "data": []
+        },
+        {
+            "type": "section",
+            "datatitle": "#StopRansomware: Akira Ransomware",
+            "data": []
+        },
+        {
+            "type": "section",
+            "datatitle": "Threat Actors Exploit Multiple Vulnerabilities in Ivanti Connect Secure and Policy Secure Gateways",
+            "data": []
+        },
+        {
+            "type": "section",
+            "datatitle": "#StopRansomware: Phobos Ransomware",
+            "data": [
+                {
+                    "type": "list",
+                    "data": [
+                        "Topics",
+                        "Spotlight",
+                        "Resources & Tools",
+                        "News & Events",
+                        "Careers",
+                        "About"
+                    ]
+                },
+                {
+                    "type": "list",
+                    "data": [
+                        "Facebook",
+                        "Twitter",
+                        "LinkedIn",
+                        "YouTube",
+                        "Instagram",
+                        "RSS"
+                    ]
+                },
+                {
+                    "type": "list",
+                    "data": [
+                        "About CISA",
+                        "Budget and Performance",
+                        "DHS.gov",
+                        "Equal Opportunity & Accessibility",
+                        "FOIA Requests",
+                        "No FEAR Act",
+                        "Office of Inspector General",
+                        "Privacy Policy",
+                        "Subscribe",
+                        "The White House",
+                        "USA.gov",
+                        "Website Feedback"
+                    ]
+                }
+            ]
+        }
+    ]
+}

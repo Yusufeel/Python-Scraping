@@ -1,0 +1,68 @@
+{
+    "title": "CISA Red Team Shares Key Findings to Improve Monitoring and Hardening of Networks",
+    "advisory_date": "2023-02-28",
+    "alert_code": "Cybersecurity Advisory | AA23-059A",
+    "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-059a",
+    "content": [
+        {
+            "type": "section",
+            "datatitle": "#StopRansomware: Black Basta",
+            "data": []
+        },
+        {
+            "type": "section",
+            "datatitle": "#StopRansomware: Akira Ransomware",
+            "data": []
+        },
+        {
+            "type": "section",
+            "datatitle": "Threat Actors Exploit Multiple Vulnerabilities in Ivanti Connect Secure and Policy Secure Gateways",
+            "data": []
+        },
+        {
+            "type": "section",
+            "datatitle": "#StopRansomware: Phobos Ransomware",
+            "data": [
+                {
+                    "type": "list",
+                    "data": [
+                        "Topics",
+                        "Spotlight",
+                        "Resources & Tools",
+                        "News & Events",
+                        "Careers",
+                        "About"
+                    ]
+                },
+                {
+                    "type": "list",
+                    "data": [
+                        "Facebook",
+                        "Twitter",
+                        "LinkedIn",
+                        "YouTube",
+                        "Instagram",
+                        "RSS"
+                    ]
+                },
+                {
+                    "type": "list",
+                    "data": [
+                        "About CISA",
+                        "Budget and Performance",
+                        "DHS.gov",
+                        "Equal Opportunity & Accessibility",
+                        "FOIA Requests",
+                        "No FEAR Act",
+                        "Office of Inspector General",
+                        "Privacy Policy",
+                        "Subscribe",
+                        "The White House",
+                        "USA.gov",
+                        "Website Feedback"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,791 @@
+{
+    "title": "#StopRansomware: Play Ransomware",
+    "advisory_date": "2023-12-18",
+    "alert_code": "Cybersecurity Advisory | AA23-352A",
+    "link": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-352a",
+    "content": [
+        {
+            "type": "section",
+            "datatitle": "SUMMARY",
+            "data": [
+                {
+                    "type": "paragraph",
+                    "data": "Note: This joint Cybersecurity Advisory (CSA) is part of an ongoing #StopRansomware effort to publish advisories for network defenders that detail various ransomware variants and ransomware threat actors. These #StopRansomware advisories include recently and historically observed tactics, techniques, and procedures (TTPs) and indicators of compromise (IOCs) to help organizations protect against ransomware. Visit stopransomware.gov to see all #StopRansomware advisories and to learn more about other ransomware threats and no-cost resources. The Federal Bureau of Investigation (FBI), Cybersecurity and Infrastructure Security Agency (CISA), and Australian Signals Directorate s Australian Cyber Security Centre (ASD's ACSC) are releasing this joint CSA to disseminate the Play ransomware group s IOCs and TTPs identified through FBI investigations as recently as October 2023. Since June 2022, the Play (also known as Playcrypt) ransomware group has impacted a wide range of businesses and critical infrastructure in North America, South America, and Europe. As of October 2023, the FBI was aware of approximately 300 affected entities allegedly exploited by the ransomware actors. In Australia, the first Play ransomware incident was observed in April 2023, and most recently in November 2023. The Play ransomware group is presumed to be a closed group, designed to \u201cguarantee the secrecy of deals,\u201d according to a statement on the group s data leak website. Play ransomware actors employ a double-extortion model, encrypting systems after exfiltrating data. Ransom notes do not include an initial ransom demand or payment instructions, rather, victims are instructed to contact the threat actors via email. The FBI, CISA, and ASD s ACSC encourage organizations to implement the recommendations in the Mitigations section of this CSA to reduce the likelihood and impact of ransomware incidents. This includes requiring multifactor authentication, maintaining offline backups of data, implementing a recovery plan, and keeping all operating systems, software, and firmware up to date. Download a PDF version of this report:"
+                },
+                {
+                    "type": "file",
+                    "name": "AA23-352A #StopRansomware: Play Ransomware",
+                    "url": "https://www.cisa.gov/sites/default/files/2023-12/aa23-352a-stopransomware-play-ransomware.pdf"
+                },
+                {
+                    "type": "paragraph",
+                    "data": "For a downloadable copy of IOCs, see:"
+                },
+                {
+                    "type": "file",
+                    "name": "AA23-352A STIX XML",
+                    "url": "https://www.cisa.gov/sites/default/files/2023-12/AA23-352A.stix_.xml"
+                },
+                {
+                    "type": "file",
+                    "name": "AA23-352A STIX JSON",
+                    "url": "https://www.cisa.gov/sites/default/files/2023-12/AA23-352A-StopRansomware-Play-Ransomware.stix_.json"
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "datatitle": "TECHNICAL DETAILS",
+            "data": [
+                {
+                    "type": "paragraph",
+                    "data": "Note: This advisory uses the MITRE ATT&CK for Enterprise framework, version 14. See the MITRE ATT&CK for Enterprise section for all referenced tactics and techniques. For assistance with mapping malicious cyber activity to the MITRE ATT&CK framework, see CISA and MITRE ATT&CK s Best Practices for MITRE ATT&CK Mapping and CISA s Decider Tool. The Play ransomware group gains initial access to victim networks through the abuse of valid accounts [T1078] and exploitation of public-facing applications [T1190], specifically through known FortiOS (CVE-2018-13379 and CVE-2020-12812) and Microsoft Exchange (ProxyNotShell [CVE-2022-41040 and CVE-2022-41082]) vulnerabilities. Play ransomware actors have been observed to use external-facing services [T1133] such as Remote Desktop Protocol (RDP) and Virtual Private Networks (VPN) for initial access. Play ransomware actors use tools like AdFind to run Active Directory queries [TA0007] and Grixba [1], an information-stealer, to enumerate network information [T1016] and scan for anti-virus software [T1518.001]. Actors also use tools like GMER, IOBit, and PowerTool to disable anti-virus software [T1562.001] and remove log files [T1070.001]. In some instances, cybersecurity researchers have observed Play ransomware actors using PowerShell scripts to target Microsoft Defender.[2] Play ransomware actors use command and control (C2) applications, including Cobalt Strike and SystemBC, and tools like PsExec, to assist with lateral movement and file execution. Once established on a network, the ransomware actors search for unsecured credentials [T1552] and use the Mimikatz credential dumper to gain domain administrator access [T1003]. According to open source reporting [2], to further enumerate vulnerabilities, Play ransomware actors use Windows Privilege Escalation Awesome Scripts (WinPEAS) [T1059] to search for additional privilege escalation paths. Actors then distribute executables [T1570] via Group Policy Objects [T1484.001]. Play ransomware actors often split compromised data into segments and use tools like WinRAR to compress files [T1560.001] into .RAR format for exfiltration. The actors then use WinSCP to transfer data [T1048] from a compromised network to actor-controlled accounts. Following exfiltration, files are encrypted [T1486] with AES-RSA hybrid encryption using intermittent encryption, encrypting every other file portion of 0x100000 bytes. [3] (Note: System files are skipped during the encryption process.) A .play extension is added to file names and a ransom note titled ReadMe[.]txt is placed in file directory C:. The Play ransomware group uses a double-extortion model [T1657], encrypting systems after exfiltrating data. The ransom note directs victims to contact the Play ransomware group at an email address ending in @gmx[.]de. Ransom payments are paid in cryptocurrency to wallet addresses provided by Play actors. If a victim refuses to pay the ransom demand, the ransomware actors threaten to publish exfiltrated data to their leak site on the Tor network ([.]onion URL). Table 1 lists legitimate tools Play ransomware actors have repurposed for their operations. The legitimate tools listed in this product are all publicly available. Use of these tools and applications should not be attributed as malicious without analytical evidence to support they are used at the direction of, or controlled by, threat actors."
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "Name",
+                            "Description"
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "AdFind",
+                            "Used to query and retrieve information from Active Directory."
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "Bloodhound",
+                            "Used to query and retrieve information from Active Directory."
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "GMER",
+                            "A software tool intended to be used for detecting and removing rootkits."
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "IOBit",
+                            "An anti-malware and anti-virus program for the Microsoft Windows operating system. Play actors have accessed IOBit to disable anti-virus software."
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "PsExec",
+                            "A tool designed to run programs and execute commands on remote systems."
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "PowerTool",
+                            "A Windows utility designed to improve speed, remove bloatware, protect privacy, and eliminate data collection, among other things."
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "PowerShell",
+                            "A cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework, which runs on Windows, Linux, and macOS."
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "Cobalt Strike",
+                            "A penetration testing tool used by security professionals to test the security of networks and systems. Play ransomware actors have used it to assist with lateral movement and file execution."
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "Mimikatz",
+                            "Allows users to view and save authentication credentials such as Kerberos tickets. Play ransomware actors have used it to add accounts to domain controllers."
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "WinPEAS",
+                            "Used to search for additional privilege escalation paths."
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "WinRAR",
+                            "Used to split compromised data into segments and to compress files into .RAR format for exfiltration."
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "WinSCP",
+                            "Windows Secure Copy is a free and open-source Secure Shell (SSH) File Transfer Protocol, File Transfer Protocol, WebDAV, Amazon S3, and secure copy protocol client. Play ransomware actors have used it to transfer data [T1048] from a compromised network to actor-controlled accounts."
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "Microsoft Nltest",
+                            "Used by Play ransomware actors for network discovery."
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "Nekto / PriviCMD",
+                            "Used by Play ransomware actors for privilege escalation."
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "Process Hacker",
+                            "Used to enumerate running processes on a system."
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "Plink",
+                            "Used to establish persistent SSH tunnels."
+                        ]
+                    }
+                },
+                {
+                    "type": "paragraph",
+                    "data": "AdFind Used to query and retrieve information from Active Directory. Bloodhound Used to query and retrieve information from Active Directory. GMER A software tool intended to be used for detecting and removing rootkits. IOBit An anti-malware and anti-virus program for the Microsoft Windows operating system. Play actors have accessed IOBit to disable anti-virus software. PsExec A tool designed to run programs and execute commands on remote systems. PowerTool A Windows utility designed to improve speed, remove bloatware, protect privacy, and eliminate data collection, among other things. PowerShell A cross-platform task automation solution made up of a command-line shell, a scripting language, and a configuration management framework, which runs on Windows, Linux, and macOS. Cobalt Strike A penetration testing tool used by security professionals to test the security of networks and systems. Play ransomware actors have used it to assist with lateral movement and file execution. Mimikatz Allows users to view and save authentication credentials such as Kerberos tickets. Play ransomware actors have used it to add accounts to domain controllers. WinPEAS Used to search for additional privilege escalation paths. WinRAR Used to split compromised data into segments and to compress files into .RAR format for exfiltration. WinSCP Windows Secure Copy is a free and open-source Secure Shell (SSH) File Transfer Protocol, File Transfer Protocol, WebDAV, Amazon S3, and secure copy protocol client. Play ransomware actors have used it to transfer data [T1048] from a compromised network to actor-controlled accounts. Microsoft Nltest Used by Play ransomware actors for network discovery. Nekto / PriviCMD Used by Play ransomware actors for privilege escalation. Process Hacker Used to enumerate running processes on a system. Plink Used to establish persistent SSH tunnels. See Table 2 for Play ransomware IOCs obtained from FBI investigations as of October 2023."
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "Hashes (SHA256)",
+                            "Description"
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "453257c3494addafb39cb6815862403e827947a1e7737eb8168cd10522465deb",
+                            "Play ransomware custom data gathering tool"
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "47c7cee3d76106279c4c28ad1de3c833c1ba0a2ec56b0150586c7e8480ccae57",
+                            "Play ransomware encryptor"
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "75404543de25513b376f097ceb383e8efb9c9b95da8945fd4aa37c7b2f226212",
+                            "SystemBC malware EXE"
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "7a42f96599df8090cf89d6e3ce4316d24c6c00e499c8557a2e09d61c00c11986",
+                            "SystemBC malware DLL"
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "7a6df63d883bbccb315986c2cfb76570335abf84fafbefce047d126b32234af8",
+                            "Play ransomware binary"
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "7dea671be77a2ca5772b86cf8831b02bff0567bce6a3ae023825aa40354f8aca",
+                            "SystemBC malware DLL"
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "c59f3c8d61d940b56436c14bc148c1fe98862921b8f7bad97fbc96b31d71193c",
+                            "Play network scanner"
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "e652051fe47d784f6f85dc00adca1c15a8c7a40f1e5772e6a95281d8bf3d5c74",
+                            "Play ransomware binary"
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "e8d5ad0bf292c42a9185bb1251c7e763d16614c180071b01da742972999b95da",
+                            "Play ransomware binary"
+                        ]
+                    }
+                },
+                {
+                    "type": "paragraph",
+                    "data": "453257c3494addafb39cb6815862403e827947a1e7737eb8168cd10522465deb Play ransomware custom data gathering tool 47c7cee3d76106279c4c28ad1de3c833c1ba0a2ec56b0150586c7e8480ccae57 Play ransomware encryptor 75404543de25513b376f097ceb383e8efb9c9b95da8945fd4aa37c7b2f226212 SystemBC malware EXE 7a42f96599df8090cf89d6e3ce4316d24c6c00e499c8557a2e09d61c00c11986 SystemBC malware DLL 7a6df63d883bbccb315986c2cfb76570335abf84fafbefce047d126b32234af8 Play ransomware binary 7dea671be77a2ca5772b86cf8831b02bff0567bce6a3ae023825aa40354f8aca SystemBC malware DLL c59f3c8d61d940b56436c14bc148c1fe98862921b8f7bad97fbc96b31d71193c Play network scanner e652051fe47d784f6f85dc00adca1c15a8c7a40f1e5772e6a95281d8bf3d5c74 Play ransomware binary e8d5ad0bf292c42a9185bb1251c7e763d16614c180071b01da742972999b95da Play ransomware binary"
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "datatitle": "MITRE ATT&CK TACTICS AND TECHNIQUES",
+            "data": [
+                {
+                    "type": "paragraph",
+                    "data": "See Table 3\u2013Table 11 for all referenced threat actor tactics and techniques in this advisory."
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [
+                            "Technique Title",
+                            "ID",
+                            "Use"
+                        ],
+                        "data": [
+                            "Valid Accounts",
+                            "T1078",
+                            "Play ransomware actors obtain and abuse existing account credentials to gain initial access."
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [
+                            "Technique Title",
+                            "ID",
+                            "Use"
+                        ],
+                        "data": [
+                            "Exploit Public Facing Application",
+                            "T1190",
+                            "Play ransomware actors exploit vulnerabilities in internet-facing systems to gain access to networks."
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [
+                            "Technique Title",
+                            "ID",
+                            "Use"
+                        ],
+                        "data": [
+                            "External Remote Services",
+                            "T1133",
+                            "Play ransomware actors have used remote access services, such as RDP/VPN connection to gain initial access."
+                        ]
+                    }
+                },
+                {
+                    "type": "paragraph",
+                    "data": "Valid Accounts T1078 Play ransomware actors obtain and abuse existing account credentials to gain initial access. Exploit Public Facing Application T1190 Play ransomware actors exploit vulnerabilities in internet-facing systems to gain access to networks. External Remote Services T1133 Play ransomware actors have used remote access services, such as RDP/VPN connection to gain initial access."
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [
+                            "Technique Title",
+                            "ID",
+                            "Use"
+                        ],
+                        "data": [
+                            "System Network Configuration Discovery",
+                            "T1016",
+                            "Play ransomware actors use tools like Grixba to identify network configurations and settings."
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [
+                            "Technique Title",
+                            "ID",
+                            "Use"
+                        ],
+                        "data": [
+                            "Software Discovery: Security Software Discovery",
+                            "T1518.001",
+                            "Play ransomware actors scan for anti-virus software."
+                        ]
+                    }
+                },
+                {
+                    "type": "paragraph",
+                    "data": "System Network Configuration Discovery T1016 Play ransomware actors use tools like Grixba to identify network configurations and settings. Software Discovery: Security Software Discovery T1518.001 Play ransomware actors scan for anti-virus software."
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [
+                            "Technique Title",
+                            "ID",
+                            "Use"
+                        ],
+                        "data": [
+                            "Impair Defenses: Disable or Modify Tools",
+                            "T1562.001",
+                            "Play ransomware actors use tools like GMER, IOBit, and PowerTool to disable anti-virus software."
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [
+                            "Technique Title",
+                            "ID",
+                            "Use"
+                        ],
+                        "data": [
+                            "Indicator Removal: Clear Windows Event Logs",
+                            "T1070.001",
+                            "Play ransomware actors delete logs or other indicators of compromise to hide intrusion activity."
+                        ]
+                    }
+                },
+                {
+                    "type": "paragraph",
+                    "data": "Impair Defenses: Disable or Modify Tools T1562.001 Play ransomware actors use tools like GMER, IOBit, and PowerTool to disable anti-virus software. Indicator Removal: Clear Windows Event Logs T1070.001 Play ransomware actors delete logs or other indicators of compromise to hide intrusion activity."
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "Technique Title",
+                            "ID",
+                            "Use"
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "Unsecured Credentials",
+                            "T1552",
+                            "Play ransomware actors attempt to identify and exploit credentials stored unsecurely on a compromised network."
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [],
+                        "data": [
+                            "OS Credential Dumping",
+                            "T1003",
+                            "Play ransomware actors use tools like Mimikatz to dump credentials."
+                        ]
+                    }
+                },
+                {
+                    "type": "paragraph",
+                    "data": "Unsecured Credentials T1552 Play ransomware actors attempt to identify and exploit credentials stored unsecurely on a compromised network. OS Credential Dumping T1003 Play ransomware actors use tools like Mimikatz to dump credentials."
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [
+                            "Technique Title",
+                            "ID",
+                            "Use"
+                        ],
+                        "data": [
+                            "Lateral Tool Transfer",
+                            "T1570",
+                            "Play ransomware actors distribute executables within the compromised environment."
+                        ]
+                    }
+                },
+                {
+                    "type": "paragraph",
+                    "data": "Lateral Tool Transfer T1570 Play ransomware actors distribute executables within the compromised environment."
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [
+                            "Technique Title",
+                            "ID",
+                            "Use"
+                        ],
+                        "data": [
+                            "Domain Policy Modification: Group Policy Modification",
+                            "T1484.001",
+                            "Play ransomware actors distribute executables via Group Policy Objects."
+                        ]
+                    }
+                },
+                {
+                    "type": "paragraph",
+                    "data": "Domain Policy Modification: Group Policy Modification T1484.001 Play ransomware actors distribute executables via Group Policy Objects."
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [
+                            "Technique Title",
+                            "ID",
+                            "Use"
+                        ],
+                        "data": [
+                            "Archive Collected Data: Archive via Utility",
+                            "T1560.001",
+                            "Play ransomware actors use tools like WinRAR to compress files."
+                        ]
+                    }
+                },
+                {
+                    "type": "paragraph",
+                    "data": "Archive Collected Data: Archive via Utility T1560.001 Play ransomware actors use tools like WinRAR to compress files."
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [
+                            "Technique Title",
+                            "ID",
+                            "Use"
+                        ],
+                        "data": [
+                            "Exfiltration Over Alternative Protocol",
+                            "T1048",
+                            "Play ransomware actors use file transfer tools like WinSCP to transfer data."
+                        ]
+                    }
+                },
+                {
+                    "type": "paragraph",
+                    "data": "Exfiltration Over Alternative Protocol T1048 Play ransomware actors use file transfer tools like WinSCP to transfer data."
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [
+                            "Technique Title",
+                            "ID",
+                            "Use"
+                        ],
+                        "data": [
+                            "Data Encrypted for Impact",
+                            "T1486",
+                            "Play ransomware actors encrypt data on target systems to interrupt availability to system and network resources."
+                        ]
+                    }
+                },
+                {
+                    "type": "table",
+                    "data": {
+                        "header": [
+                            "Technique Title",
+                            "ID",
+                            "Use"
+                        ],
+                        "data": [
+                            "Financial Theft",
+                            "T1657",
+                            "Play ransomware actors use a double-extortion model for financial gain."
+                        ]
+                    }
+                },
+                {
+                    "type": "paragraph",
+                    "data": "Data Encrypted for Impact T1486 Play ransomware actors encrypt data on target systems to interrupt availability to system and network resources. Financial Theft T1657 Play ransomware actors use a double-extortion model for financial gain."
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "datatitle": "MITIGATIONS",
+            "data": [
+                {
+                    "type": "paragraph",
+                    "data": "These mitigations apply to all critical infrastructure organizations and network defenders. The FBI, CISA, and ASD s ACSC recommend that software manufacturers incorporate secure-by-design and -default principles and tactics into their software development practices to limit the impact of ransomware techniques (such as threat actors leveraging backdoor vulnerabilities into remote software systems), thus, strengthening the security posture for their customers. For more information on secure by design, see CISA s Secure by Design and Default webpage and joint guide. The FBI, CISA, and ASD s ACSC recommend organizations apply the following mitigations to limit potential adversarial use of common system and network discovery techniques and to reduce the risk of compromise by Play ransomware. These mitigations align with the Cross-Sector Cybersecurity Performance Goals (CPGs) developed by CISA and the National Institute of Standards and Technology (NIST). The CPGs provide a minimum set of practices and protections that CISA and NIST recommend all organizations implement. CISA and NIST based the CPGs on existing cybersecurity frameworks and guidance to protect against the most common and impactful threats and TTPs. Visit CISA s Cross-Sector Cybersecurity Performance Goals for more information on the CPGs, including additional recommended baseline protections."
+                },
+                {
+                    "type": "list",
+                    "data": [
+                        "Implement a recovery plan to maintain and retain multiple copies of sensitive or proprietary data and servers [CPG 2.F, 2.R, 2.S] in a physically separate, segmented, and secure location (i.e., hard drive, storage device, the cloud).",
+                        "Require all accounts with password logins (e.g., service account, admin accounts, and domain admin accounts) to comply with NIST\u2019s standards for developing and managing password policies [CPG 2.C].\n\nUse longer passwords consisting of at least 8 characters and no more than 64 characters in length [CPG 2.B];\nStore passwords in hashed format using industry-recognized password managers;\nAdd password user \u201csalts\u201d to shared login credentials;\nAvoid reusing passwords;\nImplement multiple failed login attempt account lockouts [CPG 2.G];\nDisable password \u201chints\u201d;\nRefrain from requiring password changes more frequently than once per year.\nNote: NIST guidance suggests favoring longer passwords instead of requiring regular and frequent password resets. Frequent password resets are more likely to result in users developing password \u201cpatterns\u201d cyber criminals can easily decipher.\nRequire administrator credentials to install software.",
+                        "Use longer passwords consisting of at least 8 characters and no more than 64 characters in length [CPG 2.B];",
+                        "Store passwords in hashed format using industry-recognized password managers;",
+                        "Add password user \u201csalts\u201d to shared login credentials;",
+                        "Avoid reusing passwords;",
+                        "Implement multiple failed login attempt account lockouts [CPG 2.G];",
+                        "Disable password \u201chints\u201d;",
+                        "Refrain from requiring password changes more frequently than once per year.\nNote: NIST guidance suggests favoring longer passwords instead of requiring regular and frequent password resets. Frequent password resets are more likely to result in users developing password \u201cpatterns\u201d cyber criminals can easily decipher.",
+                        "Require administrator credentials to install software.",
+                        "Require multifactor authentication [CPG 2.H] for all services to the extent possible, particularly for webmail, virtual private networks, and accounts that access critical systems. Also see Protect Yourself: Multi-Factor Authentication | Cyber.gov.au.",
+                        "Keep all operating systems, software, and firmware up to date. Timely patching is one of the most efficient and cost-effective steps an organization can take to minimize its exposure to cybersecurity threats. Prioritize patching known exploited vulnerabilities in internet-facing systems [CPG 1.E]. Organizations are advised to deploy the latest Microsoft Exchange security updates. If unable to patch, then disable Outlook Web Access (OWA) until updates are able to be undertaken. Also see Patching Applications and Operating Systems | Cyber.gov.au.",
+                        "Segment networks [CPG 2.F] to prevent the spread of ransomware. Network segmentation can help prevent the spread of ransomware by controlling traffic flows between\u2014and access to\u2014various subnetworks and by restricting adversary lateral movement. Also see Implementing Network Segmentation and Segregation.",
+                        "Identify, detect, and investigate abnormal activity and potential traversal of the indicated ransomware with a networking monitoring tool. To aid in detecting the ransomware, implement a tool that logs and reports all network traffic, including lateral movement activity on a network [CPG 1.E]. Endpoint detection and response (EDR) tools are particularly useful for detecting lateral connections as they have insight into common and uncommon network connections for each host.",
+                        "Filter network traffic by preventing unknown or untrusted origins from accessing remote services on internal systems. This prevents actors from directly connecting to remote access services they have established for persistence. Also see Inbound Traffic Filtering \u2013 Technique D3-ITF.",
+                        "Install, regularly update, and enable real time detection for antivirus software on all hosts.",
+                        "Review domain controllers, servers, workstations, and active directories for new and/or unrecognized accounts [CPG 1.A, 2.O].",
+                        "Audit user accounts with administrative privileges and configure access controls according to the principle of least privilege [CPG 2.E].",
+                        "Disable unused ports [CPG 2.V].",
+                        "Consider adding an email banner to emails [CPG 2.M] received from outside your organization.",
+                        "Disable hyperlinks in received emails.",
+                        "Implement time-based access for accounts set at the admin level and higher. For example, the just-in-time (JIT) access method provisions privileged access when needed and can support enforcement of the principle of least privilege (as well as the Zero Trust model). This is a process where a network-wide policy is set in place to automatically disable admin accounts at the Active Directory level when the account is not in direct need. Individual users may submit their requests through an automated process that grants them access to a specified system for a set timeframe when they need to support the completion of a certain task.",
+                        "Disable command-line and scripting activities and permissions. Privileged escalation and lateral movement often depend on software utilities running from the command line. If threat actors are not able to run these tools, they will have difficulty escalating privileges and/or moving laterally [CPG 2.E].",
+                        "Maintain offline backups of data and regularly maintain backup and restoration [CPG 2.R]. By instituting this practice, an organization ensures they will not be severely interrupted, and/or only have irretrievable data.",
+                        "Ensure backup data is encrypted, immutable (i.e., cannot be altered or deleted), and covers the entire organization\u2019s data infrastructure [CPG 2.K]."
+                    ]
+                },
+                {
+                    "type": "list",
+                    "data": [
+                        "Use longer passwords consisting of at least 8 characters and no more than 64 characters in length [CPG 2.B];",
+                        "Store passwords in hashed format using industry-recognized password managers;",
+                        "Add password user \u201csalts\u201d to shared login credentials;",
+                        "Avoid reusing passwords;",
+                        "Implement multiple failed login attempt account lockouts [CPG 2.G];",
+                        "Disable password \u201chints\u201d;",
+                        "Refrain from requiring password changes more frequently than once per year.\nNote: NIST guidance suggests favoring longer passwords instead of requiring regular and frequent password resets. Frequent password resets are more likely to result in users developing password \u201cpatterns\u201d cyber criminals can easily decipher.",
+                        "Require administrator credentials to install software."
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "datatitle": "VALIDATE SECURITY CONTROLS",
+            "data": [
+                {
+                    "type": "paragraph",
+                    "data": "In addition to applying mitigations, the FBI, CISA, and ASD s ACSC recommend exercising, testing, and validating your organization s security program against the threat behaviors mapped to the MITRE ATT&CK for Enterprise framework in this advisory. The FBI, CISA, and ASD s ACSC recommend testing your existing security controls inventory to assess how they perform against the ATT&CK techniques described in this advisory. To get started:"
+                },
+                {
+                    "type": "list",
+                    "data": [
+                        "Select an ATT&CK technique described in this advisory (see Tables 3-11).",
+                        "Align your security technologies against this technique.",
+                        "Test your technologies against this technique.",
+                        "Analyze your detection and prevention technologies performance.",
+                        "Repeat the process for all security technologies to obtain a set of comprehensive performance data.",
+                        "Tune your security program, including people, processes, and technologies, based on the data generated by this process."
+                    ]
+                },
+                {
+                    "type": "paragraph",
+                    "data": "The FBI, CISA, and ASD s ACSC recommend continually testing your security program at scale and in a production environment to ensure optimal performance against the MITRE ATT&CK techniques identified in this advisory."
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "datatitle": "RESOURCES",
+            "data": [
+                {
+                    "type": "list",
+                    "data": [
+                        "Stopransomware.gov is a whole-of-government approach that gives one central location for ransomware resources and alerts.",
+                        "Resource to mitigate a ransomware attack: #StopRansomware Guide.",
+                        "No-cost cyber hygiene services: Cyber Hygiene Services and Ransomware Readiness Assessment."
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "datatitle": "REPORTING",
+            "data": [
+                {
+                    "type": "paragraph",
+                    "data": "The FBI is seeking any information that can be shared, to include boundary logs showing communication to and from foreign IP addresses, a sample ransom note, communications with Play ransomware actors, Bitcoin wallet information, decryptor files, and/or a benign sample of an encrypted file. The FBI, CISA, and ASD s ACSC do not encourage paying ransom as payment does not guarantee victim files will be recovered. Furthermore, payment may also embolden adversaries to target additional organizations, encourage other criminal actors to engage in the distribution of ransomware, and/or fund illicit activities. Regardless of whether you or your organization have decided to pay the ransom, the FBI and CISA urge you to promptly report ransomware incidents to a local FBI Field Office, the FBI s Internet Crime Complaint Center (IC3), or CISA via CISA s 24/7 Operations Center (report@cisa.gov or 888-282-0870). Australian organizations that have been impacted or require assistance in regard to a ransomware incident can contact ASD's ACSC via 1300 CYBER1 (1300 292 371), or by submitting a report to cyber.gov.au."
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "datatitle": "DISCLAIMER",
+            "data": [
+                {
+                    "type": "paragraph",
+                    "data": "The information in this report is being provided \u201cas is\u201d for informational purposes only. CISA and the FBI do not endorse any commercial entity, product, company, or service, including any entities, products, or services linked within this document. Any reference to specific commercial entities, products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply endorsement, recommendation, or favoring by CISA or the FBI."
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "datatitle": "REFERENCES",
+            "data": [
+                {
+                    "type": "paragraph",
+                    "data": "[1] Symantec: Play Ransomware Group Using New Custom Data-Gathering Tools [2] TrendMicro: Play Ransomware Spotlight [3] SentinelLabs: Ransomware Developers Turn to Intermittent Encryption to Evade Detection This product is provided subject to this Notification and this Privacy & Use policy."
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "datatitle": "Tags",
+            "data": [
+                {
+                    "type": "paragraph",
+                    "data": "We recently updated our anonymous product survey; we d welcome your feedback."
+                }
+            ]
+        },
+        {
+            "type": "section",
+            "datatitle": "#StopRansomware: Black Basta",
+            "data": []
+        },
+        {
+            "type": "section",
+            "datatitle": "#StopRansomware: Akira Ransomware",
+            "data": []
+        },
+        {
+            "type": "section",
+            "datatitle": "Threat Actors Exploit Multiple Vulnerabilities in Ivanti Connect Secure and Policy Secure Gateways",
+            "data": []
+        },
+        {
+            "type": "section",
+            "datatitle": "#StopRansomware: Phobos Ransomware",
+            "data": [
+                {
+                    "type": "list",
+                    "data": [
+                        "Topics",
+                        "Spotlight",
+                        "Resources & Tools",
+                        "News & Events",
+                        "Careers",
+                        "About"
+                    ]
+                },
+                {
+                    "type": "list",
+                    "data": [
+                        "Facebook",
+                        "Twitter",
+                        "LinkedIn",
+                        "YouTube",
+                        "Instagram",
+                        "RSS"
+                    ]
+                },
+                {
+                    "type": "list",
+                    "data": [
+                        "About CISA",
+                        "Budget and Performance",
+                        "DHS.gov",
+                        "Equal Opportunity & Accessibility",
+                        "FOIA Requests",
+                        "No FEAR Act",
+                        "Office of Inspector General",
+                        "Privacy Policy",
+                        "Subscribe",
+                        "The White House",
+                        "USA.gov",
+                        "Website Feedback"
+                    ]
+                }
+            ]
+        }
+    ]
+}
