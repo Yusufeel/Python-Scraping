@@ -5,83 +5,71 @@ import json
 import os
 import re
 
+def clean_text(text):
+    return text.replace('\u00ae', '').replace('\u00a0', ' ').replace('\n', ' ').replace('\t', ' ').replace('\u2022', '-').replace('\u2019', "'").strip()
+
 def parse_advisory_date(date_string: str) -> datetime:
     return datetime.strptime(date_string, '%b %d, %Y')
 
-def clean_html_text(text):
-    cleaned_text = re.sub(r'[\u00a0\u2022\u2019\u00ae\t\n]+', ' ', text)
-    cleaned_text = re.sub(r'\s+', ' ', cleaned_text)
-    cleaned_text = cleaned_text.strip()
-    return cleaned_text
+def process_html_content(html_content):
+    soup = BeautifulSoup(html_content, 'html.parser')
+    content = []
 
-def process_html_content(content):
-    soup = BeautifulSoup(content, 'html.parser')
-    sections = soup.find_all(['h3', 'ul', 'ol', 'table', 'p', 'figure', 'div'])
-
-    processed_content = []
     current_section = None
-
-    i = 0
-    while i < len(sections):
-        element = sections[i]
+    for element in soup.find_all(['h3', 'p', 'table', 'figure', 'div']):
         if element.name == 'h3':
             if current_section:
-                processed_content.append(current_section)
+                content.append(current_section)
             current_section = {
                 "type": "section",
                 "datatitle": element.text.strip(),
                 "data": []
             }
-        elif element.name == 'table':
-            table_header = []
-            rows = element.find_all('tr')
-            for row in rows:
-                row_data = [cell.text.strip() for cell in row.find_all(['th', 'td'])]
-                if row.find('th') and 'columnheader' in row.find('th').attrs.get('role', ''):
-                    table_header = row_data
-                else:
-                    table_data = {"header": table_header, "data": row_data}
-                    if current_section:
-                        current_section["data"].append({"type": "table", "data": table_data})
-        elif element.name in ['ul', 'ol']:
-            list_items = [li.text.strip() for li in element.find_all('li')]
-            if current_section:
-                current_section["data"].append({"type": "list", "data": list_items})
         elif element.name == 'p':
-            cleaned_text = clean_html_text(element.text)
-            if current_section:
-                if current_section["data"] and current_section["data"][-1]["type"] == "paragraph":
-                    current_section["data"][-1]["data"] += ' ' + cleaned_text
-                else:
+            cleaned_text = clean_text(element.text.strip())
+            if cleaned_text:
+                if current_section is None:
+                    current_section = {
+                        "type": "section",
+                        "datatitle": "Untitled",
+                        "data": []
+                    }
+                    content.append(current_section)
+                if not current_section["data"] or current_section["data"][-1]["type"] != "paragraph":
                     current_section["data"].append({"type": "paragraph", "data": cleaned_text})
+                else:
+                    current_section["data"][-1]["data"] += ' ' + cleaned_text
+        elif element.name == 'table':
+            if current_section:
+                headers = [th.text.strip() for th in element.find_all('th', role='columnheader')]
+                rows = []
+                for row in element.find_all('tr'):
+                    cols = [td.text.strip() for td in row.find_all('td')]
+                    if cols:
+                        rows.append(cols)
+                current_section["data"].append({"type": "table", "header": headers, "data": rows})
         elif element.name == 'figure':
-            img_tags = element.find_all('img')
-            for img_tag in img_tags:
-                if 'src' in img_tag.attrs:
-                    img_url = f"https://www.cisa.gov{img_tag['src']}"
-                    if current_section:
-                        current_section["data"].append({"type": "image", "url": img_url, "index": len(current_section["data"])})
+            if current_section:
+                img = element.find('img')
+                if img and img.get('src'):
+                    img_url = f"https://www.cisa.gov{img['src']}"
+                    img_index = len(current_section["data"]) + 1
+                    current_section["data"].append({"type": "image", "url": img_url, "index": img_index})
         elif element.name == 'div' and 'c-file__download' in element.get('class', []):
-            a_tags = element.find_all('a', href=True)
-            for a_tag in a_tags:
-                href = a_tag['href']
-                if href.endswith(('.pdf', '.json', '.xml')):
-                    file_name = a_tag.text.strip()
-                    file_link = f"https://www.cisa.gov{href}"
-                    if current_section:
-                        current_section["data"].append({"type": "file", "name": file_name, "url": file_link})
-        i += 1
-
+            if current_section:
+                a_tag = element.find('a', href=True)
+                if a_tag:
+                    href = a_tag['href']
+                    if href.endswith(('.pdf', '.json', '.xml')):
+                        file_name = a_tag.text.strip()
+                        file_link = f"https://www.cisa.gov{href}"
+                        file_index = len(current_section["data"]) + 1
+                        current_section["data"].append({"type": "file", "name": file_name, "url": file_link, "index": file_index})
+    
     if current_section:
-        processed_content.append(current_section)
+        content.append(current_section)
 
-    return processed_content
-
-
-
-
-
-
+    return content
 
 def scrape_advisories_from_page(url: str) -> list:
     try:
